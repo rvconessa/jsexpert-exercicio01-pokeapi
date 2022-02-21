@@ -1,13 +1,14 @@
 const http = require('http');
-const TeamRepository = require('./repository/teamRepository');
+const TeamService = require('./service/teamService');
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
     const { url } = req
 
     if(url === "/team") {
-        const teamRepository = new TeamRepository()
-        teamRepository.findRandomPokemons()
-        res.write("team")
+        const teamService = new TeamService()
+        const data = await teamService.get()
+        res.setHeader('Content-Type', 'application/json');
+        res.write(JSON.stringify(data))
         res.end()
     } else {
         res.write("hello world")
