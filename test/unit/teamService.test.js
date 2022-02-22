@@ -22,7 +22,7 @@ describe('TeamRepository', () => {
     })
 
     describe('testing get', () => {
-        it('should be find three pokemons', async () => {
+        it('should be find three pokemons and make a new response', async () => {
             const validResponse = mocks['validResponse']
             sandbox.stub(
                 teamService,
@@ -32,12 +32,13 @@ describe('TeamRepository', () => {
             const result = await teamService.get()
             const expected = validResponse
 
+            expect(teamService.get.calledOnce).to.be.ok
             expect(result).to.be.equal(expected)
         })
     })
 
     describe('testing getRandomPokemons', () => {
-        it('should be find three pokemons', async () => {
+        it('should be find three random pokemons', async () => {
             const validResponse = mocks['valid-random-pokemos']
             sandbox.stub(
                 teamService.teamRepository,
@@ -46,7 +47,8 @@ describe('TeamRepository', () => {
             
             const result = await teamService.teamRepository.getRandomPokemons()
             const expected = validResponse
-
+            
+            expect(teamService.teamRepository.getRandomPokemons.calledOnce).to.be.ok
             expect(result).to.be.equal(expected)
         })
     })
