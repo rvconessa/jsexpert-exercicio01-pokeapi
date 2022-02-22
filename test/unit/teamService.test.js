@@ -4,7 +4,8 @@ const sinon = require('sinon')
 const TeamService = require('../../src/service/teamService')
 
 const mocks = {
-    validResponse: require('../mocks/valid-response.json')
+    validResponse: require('../mocks/valid-response.json'),
+    validRandomPokemons: require('../mocks/valid-random-pokemos.json')
 }
 
 describe('TeamRepository', () => {
@@ -39,7 +40,8 @@ describe('TeamRepository', () => {
 
     describe('testing getRandomPokemons', () => {
         it('should be find three random pokemons', async () => {
-            const validResponse = mocks['valid-random-pokemos']
+            const validResponse = mocks['validRandomPokemons']
+
             sandbox.stub(
                 teamService.teamRepository,
                 teamService.teamRepository.getRandomPokemons.name,
