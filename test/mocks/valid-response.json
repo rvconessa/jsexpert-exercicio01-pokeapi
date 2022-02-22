@@ -1,0 +1,26 @@
+[
+    {
+       "name":"meowth",
+       "moves":[
+          "pay-day",
+          "scratch",
+          "cut"
+       ]
+    },
+    {
+       "name":"seaking",
+       "moves":[
+          "swords-dance",
+          "headbutt",
+          "horn-attack"
+       ]
+    },
+    {
+       "name":"growlithe",
+       "moves":[
+          "double-kick",
+          "headbutt",
+          "body-slam"
+       ]
+    }
+ ]

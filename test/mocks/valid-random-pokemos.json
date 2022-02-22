@@ -1,0 +1,14 @@
+[
+    {
+       "name":"meowth",
+       "url":"https://pokeapi.co/api/v2/pokemon/52/"
+    },
+    {
+       "name":"seaking",
+       "url":"https://pokeapi.co/api/v2/pokemon/119/"
+    },
+    {
+       "name":"growlithe",
+       "url":"https://pokeapi.co/api/v2/pokemon/58/"
+    }
+ ]
