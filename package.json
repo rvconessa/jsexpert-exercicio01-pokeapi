@@ -5,8 +5,9 @@
   "main": "src/api.js",
   "scripts": {
     "start": "node src/api.js",
-    "test": "npx mocha -w ./test/**/*.test.js",
-    "test:cov": "set NODE_ENV=test && npx nyc npx mocha --parallel ./test/**/*.test.js"
+    "test:dev": "NODE_ENV=test npx mocha -w --parallel **/**/*.test.js",
+    "test": "NODE_ENV=test npx mocha --parallel **/**/*.test.js",
+    "test:cov": "NODE_ENV=test npx nyc npx mocha --exit --parallel **/**/*.test.js"
   },
   "keywords": [
     "Tests",
