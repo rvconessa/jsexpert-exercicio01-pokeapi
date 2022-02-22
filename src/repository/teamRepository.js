@@ -6,7 +6,7 @@ class TeamRepository {
     }
     
     async getRandomPokemons() {
-       const data =  await request("https://pokeapi.co/api/v2/pokemon?limit=150")
+       const data = await request('https://pokeapi.co/api/v2/pokemon?limit=150')
        const shuffledArray = data.results.sort(() => 0.5 - Math.random())
        const selectedPokemons = shuffledArray.slice(0, 3)
        return selectedPokemons
